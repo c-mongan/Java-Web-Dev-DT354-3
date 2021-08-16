@@ -1,0 +1,66 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name = "struts.devMode" value="true" />
+<constant name="struts.mapper.action.prefix.enabled" value="true" />
+    <package name="default" extends="struts-default">
+		
+		<action name="signUp" class="User" method ="signUp">
+            <result name="SUCCESS">/login.jsp</result>
+			 <result name="FAILURE">/index.jsp</result>
+        </action>
+		
+		
+		
+		<action name="logIn" class="User" method ="logIn">
+            <result name="SUCCESS">/correctdetails.jsp</result>
+			 <result name="FAILURE">/loginerror.jsp</result>
+        </action>
+		
+		<action name="updateDetails" class="User" method ="update">
+            <result name="SUCCESS">/covidcheck.jsp</result>
+			 <result name="FAILURE">/updateerror.jsp</result>
+        </action>
+		
+		
+		<action name="questions" class="covidQuestions" method ="questions">
+            <result name="SUCCESS">/vaccdetails.jsp</result>
+			 <result name="FAILURE">/vaccnotice.jsp</result>
+        </action>
+		
+		
+
+		
+		<action name="setUserVaccine" class="Vaccine" method ="setUserVaccine">
+            <result name="SUCCESS">/menu.jsp</result>
+			 <result name="FAILURE">/vaccerror.jsp</result>
+        </action>
+		
+		
+		<action name="logOut" class="User" method ="logOut">
+            <result name="SUCCESS">/logout.jsp</result>
+			 <result name="FAILURE">/logouterror.jsp</result>
+        </action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+			
+		
+		
+		
+
+    </package>
+</struts>

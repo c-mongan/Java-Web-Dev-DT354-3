@@ -1,0 +1,66 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name = "struts.devMode" value="true" />
+    <package name="default" extends="struts-default">
+		
+		<action name="signUp" class="User" method ="signUp">
+            <result name="SUCCESS">/login.jsp</result>
+			 <result name="FAILURE">/index.jsp</result>
+        </action>
+		
+		
+		
+		<action name="logIn" class="User" method ="logIn">
+            <result name="SUCCESS">/correctdetails.jsp</result>
+			 <result name="FAILURE">vaccnotice.jsp</result>
+        </action>
+	
+		
+		
+		
+		
+		
+		
+		<action name="questions" class="covidQuestions" method ="questions">
+            <result name="SUCCESS">/vaccdetails.jsp</result>
+			 <result name="FAILURE">/vaccnotice.jsp</result>
+        </action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<action name="setUserVaccine" class="Vaccine" method ="setUserVaccine">
+            <result name="SUCCESS">/correctdetails.jsp</result>
+			 <result name="FAILURE">/vaccnotice.jsp</result>
+        </action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+			
+		
+		
+		
+
+    </package>
+</struts>
